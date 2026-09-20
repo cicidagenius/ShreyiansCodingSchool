@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+  
+    width:100%;
+    height:100%;
+}
+
+#parent{
+    width:300px;
+    height:300px;
+    background-color:wheat;
+    display:grid;
+    grid-template-areas:
+    "a a ."
+    "a a ."
+    ". b c";
+    /* it is not able to parse certain shape where the shape is not rectangle it can only parse vaid rectuangular shapes */
+   /* and here each elements gets 1/3 of their parernts width */
+}
+.child{
+    border:2px solid black;
+    background-color:red;
+    
+}
+.child-a{
+ grid-area:a;
+ background-color: blue;
+}
+.child-b{
+  grid-area:b;
+  background-color:lightseagreen;
+}
+.child-c{
+grid-area:c;
+background-color:coral;
+}

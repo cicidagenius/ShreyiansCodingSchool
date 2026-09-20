@@ -1,0 +1,13 @@
+button{
+    background-color:red;
+    color:black;
+    transition:all ease-out .3s;
+}
+button:hover{
+    background-color:green;
+    color:white;
+}
+body{
+    background-color: black;
+    color:white;
+}

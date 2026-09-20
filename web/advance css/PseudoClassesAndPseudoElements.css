@@ -1,0 +1,15 @@
+button:hover{
+    background-color:lightseagreen;
+}
+input:focus{
+    background-color:red;
+}
+a:active{
+    color:green;
+}
+li::before{
+    content:">";
+}
+li::after{
+    content:"🥲"
+}

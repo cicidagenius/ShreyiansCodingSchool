@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog website</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+      <header>
+    <h1>My Awesome Blog</h1>
+    <nav>
+        <a href="#home">home |</a>
+        <a href="#about">about |</a>
+        <a href="#contact">contact</a>
+    </nav>
+  </header>
+     <hr>
+     <main>
+        <article>
+     <h2>My First Blog Post</h2>
+    <p>
+This is the first paragraph of my blog post. I'm excited to share my thoughts and experiences with you all. In this post, I will be talking about my day.
+ </p>
+ <p>
+I went for a walk in the park today and it was a beautiful experience. The sun was shining, the birds were singing, and the flowers were in full bloom. I felt so relaxed and at peace while walking through the park. It was a great way to clear my mind and enjoy nature.
+ </p>
+ <div id="img">
+   <img id="image1" height="300" width="400" src="joe-caione-qO-PIF84Vxg-unsplash.jpg" alt="dog">
+   <p>Here is an imagge related to my walk in the park (imagine its's a picture of a park!).
+    </p>
+ </div>
+  
+    
+    <h2>Things i saw in the park(List Example):</h2>
+    <ul>
+        <li>Beautiful Flowers</li>
+        <li>Squirrels running around</li>
+        <li>People doing yoga</li>
+        <li>A small pond of ducks</li>
+    </ul>
+    </article>
+    <hr>
+    <article>
+    <h2>My Second Blog Post- Favourite Foods</h2>
+    <p>
+        In this post, I will be talking about my favorite foods. I love trying new dishes and exploring different cuisines. Some of my all-time favorite foods include pizza, sushi, and ice cream. I also enjoy cooking at home and experimenting with new recipes.
+    </p>
+    <ol>
+        <li>pizza
+             <ul>
+            <li>Pep</li>
+            <li>Sushi</li>
+            <li>Ice Cream</li>
+        </ul> 
+        </li>
+       <li>Sushi</li> 
+       <li>Pasta
+        <ol>
+            <li>Spaghetti</li>
+            <li>Lasagna</li>
+            <li>Ravioli</li>
+        </ol>
+    </li>
+    </ol>
+    <p>These are just a few of my favorites. What are yours?<br>
+       That's all for this post! Thanks for reading!
+    </p>
+    </article>
+    <hr>
+    <p> &copy;2023 My simple Blog. All rights reserved.</p>
+   </main>
+</body>
+</html>
+
+<!-- Good catch — this isn't a CSS/spacing bug at all, it's a broken HTML structure. Here's what's actually happening in your <ol> for the Pasta section:
+
+html
+<li>Pasta
+    <ol>
+        <li>Spaghetti</li>
+        <li>Lasagna</li>
+        <li>Ravioli</li> -->
+   <!-- </li>      ⚠️ this closes nothing valid
+</ol>          ⚠️ this closes the INNER ol, not the outer one
+
+You never wrote a closing </li> for the outer "Pasta" item, and you never wrote a closing </ol> for the outer list. You're one </li> and one </ol> short.
+
+When the browser hits that stray </li> right after Ravioli, it looks for an open <li> to close — but because it's still inside the nested <ol>, that closing tag isn't allowed to "reach outside" the nested list to close the Pasta <li>. So the browser just throws that tag away (parse error, ignored).
+
+Then the following </ol> closes the inner list (Spaghetti/Lasagna/Ravioli), but the outer <li>Pasta</li> and outer <ol> are still open on the stack — you never told the browser to close them.
+
+So every element that comes after — the <p>These are just a few...</p>, the <hr>, and the final <p>©2023...</p> — all silently become children of that still-open <li>Pasta, which is still inside the still-open outer <ol>.
+
+That's your gap: <ol>/<li> elements carry default browser margin and indentation styling. Because your closing paragraph, horizontal rule, and copyright line are now nested inside a list item instead of being siblings after it, they inherit that list's spacing (plus their own paragraph margins on top of it), which is what creates the extra vertical gap before the last <hr> and around those trailing elements.
+
+In short: it's not extra CSS margin being applied — it's that unclosed tags caused the browser's error-recovery parser to nest unrelated content inside your list, and lists come with built-in spacing that content doesn't have when it's a normal sibling element. -->

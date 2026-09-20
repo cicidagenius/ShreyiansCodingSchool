@@ -1,0 +1,77 @@
+.c{
+    background-color:red;  
+    /* font-size:16px;
+     */
+     font-weight:bold;
+     font-style:oblique;
+} 
+.b{
+    color:green;
+    text-shadow:10px 10px 5px white;
+}
+#this{
+    color:#00ff00;
+    font-family:sans-serif;
+    /*y can do color representation in many ways like rgb, hex, hsl, etc. */
+}
+#mine{
+    color:rgba(0,255,0,0.7);
+    /* basically the a in rgba is for taransparency, 0 is fully transparent and 1 is fully opaque */
+    line-height:1;
+    text-align:right;
+    text-transform:lowercase;
+    /* word-spacing:80px; */
+}
+#res{
+    /* background-color:red; */
+    /* now to create border
+     */
+     /* in orderr to create border we need to use border-width, border-color and border-style */
+     border-width: 2px;
+     border-color:red;
+     border-style:solid;
+     border-radius:10px;
+    width: 40%;
+    height:400px;
+    padding:20px;
+    box-sizing:content-box;
+    
+    /* margin:20px; */
+}
+#im{
+    width:40%;
+    height:400px;
+        padding:20px;
+         border-width: 2px;
+     border-color:red;
+     border-style:solid;
+     border-radius:10px;
+    box-sizing:content-box;
+    background-image: url("https://plus.unsplash.com/premium_photo-1789052897449-3ad438f675d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8");
+    background-size:cover; /* to make the zoomed pic to match the size of the container */;
+    background-position:center;
+
+}
+#lg{
+    width:80%;
+    height:200px;
+        padding:20px;
+         border-width: 2px;
+     border-color:white;
+     border-style:solid;
+     margin:20px;
+     box-shadow: 10px 10px 100px white;
+     /* border-radius:10px; */
+    box-sizing:content-box;
+    /* background:linear-gradient(to left,red,yellow,blue,purple,cyan); */
+}
+body{
+    background-color: black;
+    color:white;
+}   
+input[type="text"]{
+   background-color:blue; 
+   font-style:oblique;
+}
+
+

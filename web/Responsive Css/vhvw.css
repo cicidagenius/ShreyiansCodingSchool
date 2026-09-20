@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color:#fff; /* always remember to set the text color to white or visible color when using a black bg*/
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+     background-color:#111;
+}
+.parent{
+    width:50vw;
+    height:50vh;
+    background-color:crimson;
+}
+.child{
+    width:25vw;
+    height:25vh;
+    background-color: lightseagreen;
+}

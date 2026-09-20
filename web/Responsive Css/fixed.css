@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+body{
+    background-color:black;
+    color:white;
+}
+.parent{
+    width:100%;
+    height:400px;
+    background-color:pink;
+}
+.child{
+    width:50%;
+    height:100%;
+    background-color:red;
+}
+/* so basically what we are trying to understand is how the % unit works */

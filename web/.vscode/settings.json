@@ -1,0 +1,6 @@
+{
+  "emmet.triggerExpansionOnTab": true,
+  "html.autoClosingTags": true,
+  "editor.formatOnType": true,
+  "emmet.showExpandedAbbreviation": "always"
+}
